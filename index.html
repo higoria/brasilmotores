@@ -589,6 +589,35 @@
             line-height: 1.7
         }
 
+        /* ── MARINE SEPARATOR ─────────────────── */
+        .marine-sep {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            margin-top: 3rem;
+            margin-bottom: 1.5px;
+        }
+
+        .marine-sep-line {
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .marine-sep-label {
+            font-family: var(--cond);
+            font-size: .7rem;
+            font-weight: 700;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: var(--red);
+            white-space: nowrap;
+        }
+
+        .cards-marine {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
         /* ── CALLOUT (red band) ─────────────────── */
         .callout {
             padding: 6rem 0;
@@ -1122,6 +1151,10 @@
                 grid-template-columns: 1fr
             }
 
+            .cards-marine {
+                grid-template-columns: 1fr
+            }
+
             .callout-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem
@@ -1160,7 +1193,7 @@
             <div class="nav-inner">
                 <a href="#" aria-label="Brasil Motores">
                     <div class="logo-name">BRASIL <em>MOTORES</em></div>
-                    <div class="logo-sub">Diesel · Caminhões · Máquinas</div>
+                    <div class="logo-sub">Diesel · Caminhões · Máquinas · Embarcações</div>
                 </a>
                 <ul class="nav-links">
                     <li><a href="#servicos">Serviços</a></li>
@@ -1246,7 +1279,7 @@
                     <div class="tag rev" style="margin-bottom:1.25rem">Nossas Especialidades</div>
                     <h2 class="sec-title rev d1">SOLUÇÕES COMPLETAS<br><span class="ghost">EM MOTORES</span></h2>
                 </div>
-                <p class="services-p rev d2">Do reparo emergencial à retífica completa, a Brasil Motores mantém sua frota e seus equipamentos no campo — com técnicos especializados em diesel e peças homologadas.</p>
+                <p class="services-p rev d2">Do reparo emergencial à retífica completa, a Brasil Motores mantém sua frota, seus equipamentos e suas embarcações operando — com técnicos especializados em diesel e peças homologadas.</p>
             </div>
             <div class="cards">
                 <article class="card rev">
@@ -1267,6 +1300,27 @@
                         class="card-icon">
                     <h3 class="card-title">CÂMBIO & TRANSMISSÃO</h3>
                     <p class="card-p">Câmbio manual e automatizado para caminhões pesados e semirreboque, diferencial, eixo traseiro e redutores — reparo com garantia e peças originais.</p>
+                </article>
+            </div>
+
+            <!-- Embarcações -->
+            <div class="marine-sep rev">
+                <span class="marine-sep-line"></span>
+                <span class="marine-sep-label">Embarcações</span>
+                <span class="marine-sep-line"></span>
+            </div>
+            <div class="cards cards-marine">
+                <article class="card rev d1">
+                    <span class="card-num">04</span>
+                    <img src="assets/image-Iy3td04F3W9maaDXJ15mBgY3neSWcV.png" alt="Lancha" class="card-icon">
+                    <h3 class="card-title">LANCHAS</h3>
+                    <p class="card-p">Reparo e retífica de motores de popa e centro para lanchas — diagnóstico preciso, revisão completa e manutenção preventiva para sua embarcação render ao máximo na água.</p>
+                </article>
+                <article class="card rev d2">
+                    <span class="card-num">05</span>
+                    <img src="assets/image-2cxI9joNIYCxEeXuykWF07A1LbBaa9.png" alt="Jet Ski" class="card-icon">
+                    <h3 class="card-title">JET SKI</h3>
+                    <p class="card-p">Manutenção e reparo de motores para jet ski de todas as marcas: Sea-Doo, Yamaha, Kawasaki. Motor sem potência, superaquecimento ou perda de força? A gente resolve.</p>
                 </article>
             </div>
         </div>
@@ -1397,8 +1451,8 @@
                         <div class="field"><label for="tel">Telefone</label><input type="tel" id="tel" name="tel"
                                 placeholder="(11) 99999-9999" required></div>
                     </div>
-                    <div class="field"><label for="veiculo">Caminhão / Máquina / Equipamento</label><input type="text" id="veiculo"
-                            name="veiculo" placeholder="Ex: Scania R450, Volvo FH, Retroescavadeira JCB 3CX…"></div>
+                    <div class="field"><label for="veiculo">Caminhão / Máquina / Embarcação</label><input type="text" id="veiculo"
+                            name="veiculo" placeholder="Ex: Scania R450, Retroescavadeira JCB, Lancha Sea Ray…"></div>
                     <div class="field">
                         <label for="tipo">Tipo de Serviço</label>
                         <select id="tipo" name="tipo">
@@ -1409,6 +1463,8 @@
                             <option>Câmbio e Transmissão</option>
                             <option>Manutenção Preventiva de Frota</option>
                             <option>Máquinas Pesadas (campo)</option>
+                            <option>Motor de Lancha</option>
+                            <option>Motor de Jet Ski</option>
                             <option>Outro</option>
                         </select>
                     </div>
@@ -1436,7 +1492,7 @@
             <div class="footer-grid">
                 <div>
                     <div class="logo-name">BRASIL <em style="color:var(--red)">MOTORES</em></div>
-                    <p class="footer-brand-p">Mais de 15 anos especializados em diesel. Caminhões, ônibus, tratores e máquinas pesadas — devolvemos sua operação com rapidez e garantia.</p>
+                    <p class="footer-brand-p">Mais de 15 anos especializados em diesel. Caminhões, máquinas pesadas, lanchas e jet ski — devolvemos sua operação com rapidez e garantia.</p>
                 </div>
                 <div>
                     <p class="footer-h">Serviços</p>
@@ -1444,6 +1500,7 @@
                         <li><a href="#servicos">Motores Diesel</a></li>
                         <li><a href="#servicos">Máquinas Pesadas</a></li>
                         <li><a href="#servicos">Câmbio & Transmissão</a></li>
+                        <li><a href="#servicos">Lanchas & Jet Ski</a></li>
                         <li><a href="#servicos">Manutenção de Frota</a></li>
                     </ul>
                 </div>
